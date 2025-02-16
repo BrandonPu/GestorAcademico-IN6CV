@@ -3,7 +3,7 @@ import Usuario from '../users/user.model.js';
 import { generarJWT } from '../helpers/generate-jwt.js';
 
 export const login = async (req, res) => {
-
+    
     const {email,password, username} = req.body;
 
     try {
@@ -33,7 +33,7 @@ export const login = async (req, res) => {
         }
 
         const token = await generarJWT(user.id);
-
+        
         res.status(200).json({
             msg: "Inicio De Sesion Exitoso!",
             userDetails: {
@@ -43,7 +43,7 @@ export const login = async (req, res) => {
             }
         })
 
-
+        
     } catch (error) {
         console.log(e);
         res.status(500).json({

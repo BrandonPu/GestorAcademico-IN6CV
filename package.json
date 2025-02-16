@@ -1,26 +1,22 @@
 {
-  "name": "gertoracademico",
+  "name": "academic-system",
   "version": "1.0.0",
-  "description": "Este es un proyecto de Gestor Académico de Teacher y Student",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrandonPu/GestorAcademico-IN6CV.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BrandonPu/GestorAcademico-IN6CV/issues"
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   },
-  "homepage": "https://github.com/BrandonPu/GestorAcademico-IN6CV#readme",
   "dependencies": {
-    "bcryptjs": "^3.0.0",
+    "argon2": "^0.41.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -28,9 +24,8 @@
     "express-validator": "^7.2.1",
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.10.1",
+    "mongoose": "^8.10.0",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.9"
-  },
-  "type": "module"
+    "multer": "^1.4.5-lts.1"
+  }
 }

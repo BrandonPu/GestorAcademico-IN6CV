@@ -7,11 +7,11 @@ const UserSchema = new mongoose.Schema({
     },
     surname: {
         type: String,
-        required: [true, "El Apellido Es Obligatorio"]
+        required: [true, "El Nombre Es Obligatorio"]
     },
     username: {
         type: String,
-        required: [true, "El Nombre de Usuario Es Obligatorio"]
+        required: [true, "El Nombre Es Obligatorio"]
     },
     email:{
         type: String,
@@ -29,7 +29,7 @@ const UserSchema = new mongoose.Schema({
     },
     cursos: [{ 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: "Course"  // Asume que ya se tiene un modelo de "Curso" que puedes referenciar
+        ref: "Course"  // Asume que tienes un modelo de "Curso" que puedes referenciar
     }],
     estado: {
         type: Boolean,

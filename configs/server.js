@@ -6,8 +6,8 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticiones.js'
-//import authRoutes from '../src/auth/auth.routes.js'
-//import userRoutes from "../src/users/user.routes.js"
+import authRoutes from '../src/auth/auth.routes.js'
+import userRoutes from "../src/users/user.routes.js"
 //import courseRoutes from "../src/courses/course.controller.js"
 
 const configurarMiddlewares = (app) => {
@@ -20,8 +20,8 @@ const configurarMiddlewares = (app) => {
 }
 
 const configurarRutas = (app) =>{
-        //app.use("/academicSystem/v1/auth", authRoutes);
-        //app.use("/academicSystem/v1/users", userRoutes);
+        app.use("/academicSystem/v1/auth", authRoutes);
+        app.use("/academicSystem/v1/users", userRoutes);
         //app.use("/academicSystem/v1/courses", courseRoutes);
 }
 
